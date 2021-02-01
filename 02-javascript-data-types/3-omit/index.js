@@ -6,11 +6,11 @@
  */
 export const omit = (obj, ...fields) => {
   const getFields = [...fields];
-  const newObj = {...obj};
-  getFields.forEach(item => {
-    if (newObj[item]) {
-      delete newObj[item];
+  const newObj = {};
+  for (let item in obj) {
+    if (!getFields.includes(item)) {
+      newObj[item] = item;
     }
-  });
+  }
   return newObj;
 };
