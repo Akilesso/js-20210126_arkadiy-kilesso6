@@ -5,6 +5,6 @@
  */
 export function invertObj(obj) {
   if (obj) {
-    return Object.fromEntries(Object.entries(obj).map(item => item.reverse()));
+    return (Object.fromEntries(Object.entries(obj).map(item => item.reverse())));
   }
 }
